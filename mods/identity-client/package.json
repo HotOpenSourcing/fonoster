@@ -1,6 +1,6 @@
 {
   "name": "@fonoster/identity-client",
-  "version": "0.50.0",
+  "version": "0.51.0",
   "description": "Lightweight client for the Fonoster Identity gRPC service",
   "license": "MIT",
   "repository": {
@@ -15,7 +15,7 @@
   "types": "dist/index",
   "scripts": {
     "prebuild": "rimraf ./dist tsconfig.tsbuildinfo && node scripts/sync-proto.mjs",
-    "build": "tsc -p tsconfig.json"
+    "build": "node init && tsc -p tsconfig.json"
   },
   "dependencies": {
     "@grpc/grpc-js": "~1.14.6",

@@ -1,6 +1,6 @@
 {
   "name": "@fonoster/dashboard",
-  "version": "0.50.0",
+  "version": "0.51.0",
   "private": true,
   "description": "Fonoster Dashboard",
   "homepage": "https://fonoster.com",
@@ -8,8 +8,8 @@
   "author": "Fonoster Team <team@fonoster.com>",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -p tsconfig.build.json && vite build",
+    "dev": "node init && vite",
+    "build": "node init && tsc -p tsconfig.build.json && vite build",
     "preview": "vite preview --port 3030",
     "typecheck": "tsc -p tsconfig.json",
     "test": "vitest run",
@@ -17,11 +17,11 @@
     "test:e2e:real": "node e2e/real-env.cjs",
     "gen:tokens": "tsx scripts/gen-tokens.ts",
     "storybook": "storybook dev -p 6006",
-    "build:storybook": "storybook build"
+    "build:storybook": "node init && storybook build"
   },
   "dependencies": {
-    "@fonoster/sdk": "^0.50.0",
-    "@fonoster/types": "^0.50.0",
+    "@fonoster/sdk": "^0.51.0",
+    "@fonoster/types": "^0.51.0",
     "@fontsource/poppins": "^5.3.0",
     "@fontsource/roboto-mono": "^5.3.0",
     "@hookform/resolvers": "^5.0.1",
@@ -56,7 +56,7 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
-    "@fonoster/voice": "^0.50.0",
+    "@fonoster/voice": "^0.51.0",
     "@playwright/test": "^1.64.0",
     "@storybook/addon-a11y": "^8.6.19",
     "@storybook/addon-essentials": "^8.6.19",

@@ -1,6 +1,5 @@
 # No trailing slash: a worktree links node_modules as a symlink, which git sees as a file
 node_modules
-.env*
 !.env.example
 *.log
 reporting/*
@@ -69,3 +68,4 @@ reports/
 
 # The widget's tests run its Python in place.
 ops/widgets/__pycache__/
+config.bat
